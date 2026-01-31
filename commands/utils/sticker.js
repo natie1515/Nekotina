@@ -16,7 +16,7 @@ const fecha = d.toLocaleDateString(locale, {day: '2-digit', month: '2-digit', ye
 
 let user = globalThis.db.data.users[m.sender];
 const name = user.name;
-let text1 = user.metadatos || `S'ᴛᴇʟʟᴀʀ 🧠 WᴀBᴏᴛ`;
+let text1 = user.metadatos || `Nᴇᴋᴏᴛɪɴᴀ 🧠 WᴀBᴏᴛ`;
 let text2 = user.metadatos2 || `@${name}`;
 
 if (/image/.test(mime)) {
