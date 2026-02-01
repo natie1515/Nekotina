@@ -16,7 +16,7 @@ export default {
         email: 'danivelasco745@gmail.com',
         region: 'Brasil',
         website: 'https://api.stellarwa.xyz',
-        note: '🐸 Creadora oficial de todo Nekotina'.'
+        note: '🐸 Creadora oficial de todo Nekotina.'
       }
 
       const generateVCard = ({ number, name, org, email, region, website, note }) => {
