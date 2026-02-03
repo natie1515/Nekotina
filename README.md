@@ -2,7 +2,7 @@
 > **Este proyecto está en constante evolución. Estamos comprometidos en ofrecer a nuestra comunidad un Bot increíble. Te invitamos a instalarlo y para estar al tanto de todas las novedades. [¡Únete a nuestro nuevo canal!](https://whatsapp.com/channel/0029VaCDajZ9WtBvBZy76k2h)**
 
 <p align="center"> 
-<img src="https://cdn.evogb.org/ⁿᵏGwee ⚝/QrhQf-a_61c312037ff14d366f4ef544c1f1c6b1.gif" alt="Nekotina-Proyect" style="width: 75%; height: auto; max-width: 100px;">
+<img src="https://cdn.evogb.org/natie1515/Cwt6h-1769636116566.png" alt="Nekotina-Proyect" style="width: 75%; height: auto; max-width: 100px;">
 
 <p align="center"> 
 <a href="#"><img title="Nekotina-Proyect" src="https://img.shields.io/badge/¡Disfruta de un Bot totalmente gratuito, con múltiples funciones y de código abierto! -purple?colorA=%239b33b0&colorB=%231c007b&style=for-the-badge"></a> 
@@ -12,7 +12,7 @@
 
 ## 🪾 Descripción 
 
-Hutao es un bot de WhatsApp multifuncional basado en `baileys`. Este bot ofrece una variedad de características para mejorar tu experiencia en WhatsApp.
+Nekotina es un bot de WhatsApp multifuncional basado en `baileys`. Este bot ofrece una variedad de características para mejorar tu experiencia en WhatsApp.
 
 ---
 
