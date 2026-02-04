@@ -7,7 +7,7 @@ import moment from 'moment-timezone';
 const COMMANDS_URL = 'https://rest.alyabotpe.xyz/src/commands.js'
 
 export default {
-  command: ['allmenu', 'help', 'menu'],
+  command: ['allmenu', 'help', 'menu', 'Neko help'],
   category: 'info',
   run: async (client, m, args, command, text, prefix) => {
     try {
@@ -104,7 +104,7 @@ export default {
         })
       }
 
-menu += `\n> *${botname2} desarrollado por ZyxlJs* ૮(˶ᵔᵕᵔ˶)ა`
+menu += `\n> *${botname2} desarrollado por Gwee* ૮(˶ᵔᵕᵔ˶)ა`
 
 if (banner.endsWith('.mp4') || banner.endsWith('.gif') || banner.endsWith('.webm')) {
 await client.sendMessage(
