@@ -7,7 +7,7 @@ import moment from 'moment-timezone';
 const COMMANDS_URL = 'https://rest.alyabotpe.xyz/src/commands.js'
 
 export default {
-  command: ['allmenu', 'help', 'menu', 'Neko help'],
+  command: ['allmenu', 'help', 'menu', 'Nekohelp'],
   category: 'info',
   run: async (client, m, args, command, text, prefix) => {
     try {
