@@ -7,7 +7,7 @@ import moment from 'moment-timezone';
 const COMMANDS_URL = 'https://rest.alyabotpe.xyz/src/commands.js'
 
 export default {
-  command: ['allmenu', 'help', 'menu', 'Nekohelp'],
+  command: ['allmenu', 'help', 'menu'],
   category: 'info',
   run: async (client, m, args, command, text, prefix) => {
     try {
@@ -35,8 +35,6 @@ export default {
       const botname2 = botSettings.namebot2 || ''
       const banner = botSettings.banner || ''
       const owner = botSettings.owner || ''
-      const canalid = botSettings.id || ''
-      const canalname = botSettings.nameid || ''
       const link = botSettings.link || ''
 
       const isOficialBot = botId === global.client.user.id.split(':')[0] + '@s.whatsapp.net'
@@ -44,32 +42,29 @@ export default {
       const isModBot = botSettings.botmod === true
       const botType = isOficialBot
         ? 'Owner'
-        : isPremiumBot
-          ? 'Premium'
-          : isModBot
-            ? 'Main'
             : 'Sub Bot'
       const users = Object.keys(global.db.data.users).length
 
      const time = client.uptime ? formatearMs(Date.now() - client.uptime) : "Desconocido"
       const device = getDevice(m.key.id);
 
-      let menu = `> *¡ʜᴏʟᴀ!* ${global.db.data.users[m.sender].name}, como está tu día?, mucho gusto mi nombre es *${botname2}*
+      let menu = `> *¡ʜᴏʟᴀ!* ${global.db.data.users[m.sender].name}, como está tu día?, mucho gusto mi nombre es *${botname2}* ʚ♡⃛ɞ(ू•ᴗ•ू❁)*
 
-︵ׄ⏜︵ׄ⠑ ⏜ 𓊈  🌱  𓊉 ⏜ ⠊︵ֺ⏜︵ֺ
+   ⌒࣪᷼⏜͡  ۪  ࿚ꨪᰰ࿙  ࣭࣪⢏࣭۟⢢࣭ׄ᎐፝֟᎐࣭ׄ⡔࣭۟⡹࣭ׄ  ࿚ꨪᰰ࿙  ۪  ͡⏜ׄ᷼⌒
 
-→ *ᴅᴇᴠᴇʟᴏᴘᴇʀ ::* ${owner ? (!isNaN(owner.replace(/@s\.whatsapp\.net$/, '')) ? `${global.db.data.users[owner].name}` : owner) : "Oculto por privacidad"}
-→ *ᴛɪᴘᴏ ::* ${botType}
-→ *sɪsᴛᴇᴍᴀ/ᴏᴘʀ ::* ${device}
+: ̗̀〄 *ᴅᴇᴠᴇʟᴏᴘᴇʀ ::* ${owner ? (!isNaN(owner.replace(/@s\.whatsapp\.net$/, '')) ? `${global.db.data.users[owner].name}` : owner) : "Oculto por privacidad"}
+: ̗̀ꕥ *ᴛɪᴘᴏ ::* ${botType}
+: ̗̀☄︎ *sɪsᴛᴇᴍᴀ/ᴏᴘʀ ::* ${device}
 
-→ *ᴛɪᴍᴇ ::* ${tiempo}, ${tiempo2}
-→ *ᴜsᴇʀs ::* ${users.toLocaleString()}
-→ *ᴜʀʟ ::* ${link}
-→ *ᴍɪ ᴛɪᴇᴍᴘᴏ ::* ${time}
+: ̗̀❖ *ᴛɪᴍᴇ ::* ${tiempo}, ${tiempo2}
+: ̗̀❖ *ᴜsᴇʀs ::* ${users.toLocaleString()}
+: ̗̀❖ *ᴍɪ ᴛɪᴇᴍᴘᴏ ::* ${time}
+: ̗̀❖ *ᴜʀʟ ::* ${link}
 
-࿙⃛࿚⃛࿙⃛࿚⃛࿙⃛࿚⃛࿙⃛࿚⃛࿙⃛࿚⃛࿙⃛࿚⃛   .   ࿙⃛࿚⃛࿙⃛࿚⃛࿙⃛࿚⃛࿙⃛࿚⃛࿙⃛࿚⃛࿙⃛࿚⃛
+  ⌒࣪᷼⏜͡  ۪  ࿚ꨪᰰ࿙  ࣭࣪⢏࣭۟⢢࣭ׄ᎐፝֟᎐࣭ׄ⡔࣭۟⡹࣭ׄ  ࿚ꨪᰰ࿙  ۪  ͡⏜ׄ᷼⌒
 
-乂 *ʟɪsᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs* 乂\n`
+
+⋆｡ﾟ☁︎ ｡° *ᴄᴏᴍ꯭ᴀ꯭ɴᴅᴏs* ﾟ｡˚₊ 𓂃\n`
 
       const categoryArg = args[0]?.toLowerCase()
       const categories = {}
@@ -81,13 +76,13 @@ export default {
       }
 
       if (categoryArg && !categories[categoryArg]) {
-        return m.reply(`🌱 La categoría *${categoryArg}* no fue encontrada.`)
+        return m.reply(`《✤》 La categoría *${categoryArg}* no fue encontrada.`)
       }
 
       for (const [category, cmds] of Object.entries(categories)) {
         if (categoryArg && category.toLowerCase() !== categoryArg) continue
         const catName = category.charAt(0).toUpperCase() + category.slice(1)
-         menu += `\n .  . ︵ *${catName}*.  ◌Ⳋ𝅄\n`;
+         menu += `\n╭╼ׅࣶ፝֟╾╌ֵ╾͜─ํ͜┈ְ ࣭࣪⢏࣭ࣧ⢢࣭ׄ᎐፝֟͟͝᎐࣭ׄ⡔࣭ࣧ⡹࣭࣭ׄ࣪ ְ┈ํ͜─͜╼ꨪᰰ╾࣮╌╼ࣶׅ፝֟╾╮\n│❀ *${catName} ☆(ﾉ◕ヮ◕)ﾉ*\n├╾ׅ╴ׂ╌╶ׅ╌ׂ─ 〫─ׂ┄ׅ╴ׂ╌ׅ╶╼.  ╾ׅ╴ׂ╌╶ׅ╌ׂ\n`;
         cmds.forEach((cmd) => {
           const cleanPrefix = prefix
           const aliases = cmd.alias
@@ -99,61 +94,39 @@ export default {
               return `${prefix}${aliasClean}`
             })
             .join(' › ')
-          menu += `.꒷🌳.𖦹˙ ${aliases} ${cmd.uso ? `+ ${cmd.uso}` : ''}\n`
-          menu += `> ${cmd.desc}\n`
+          menu += `│✿ ${aliases} ${cmd.uso ? `+ ${cmd.uso}` : ''}\n`
+          menu += `> ✺ ${cmd.desc}\n`
         })
+          menu += `╰╼ׅࣶ፝֟╾╌ֵ╾͜─ํ͜┈ְ ࣭࣪⢏࣭ࣧ⢢࣭ׄ᎐፝֟͟͝᎐࣭ׄ⡔࣭ࣧ⡹࣭ׄ ְ┈ํ͜─͜╼ꨪᰰ╾࣮╌╼ࣶׅ፝֟╾╯ \n`
       }
 
-menu += `\n> *${botname2} desarrollado por Gwee* ૮(˶ᵔᵕᵔ˶)ა`
+menu += `\n> *${botname2} desarrollado por Diego* ૮(˶ᵔᵕᵔ˶)ა`
+
+let caption = menu
 
 if (banner.endsWith('.mp4') || banner.endsWith('.gif') || banner.endsWith('.webm')) {
-await client.sendMessage(
-  m.chat,
-  {
-    video: { url: banner },
-    gifPlayback: true,
-    caption: menu,
-    contextInfo: {
-      mentionedJid: [owner],
-      isForwarded: true,
-      forwardedNewsletterMessageInfo: {
-        newsletterJid: canalid,
-        serverMessageId: '0',
-        newsletterName: canalname,
-      }
-    }
-  },
-  { quoted: m }
-)
+          await client.sendMessage(m.chat, { video: { url: banner }, caption }, { quoted: m })
+
 } else {
-  await client.sendMessage(
-    m.chat,
-    {
+    await client.sendMessage(m.chat, {
       text: menu,
       contextInfo: {
-        mentionedJid: [owner],
-        isForwarded: true,
-        forwardedNewsletterMessageInfo: {
-          newsletterJid: canalid,
-          serverMessageId: '0',
-          newsletterName: canalname,
-        },
+        mentionedJid: [...menu.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net'),
         externalAdReply: {
+          renderLargerThumbnail: true,
           title: botname,
-          body: `${botname2},`,
-          showAdAttribution: false,
-          thumbnailUrl: banner,
+          body: `${botname2}, Built With 💛 By Stellar`,
           mediaType: 1,
-          previewType: 0,
-          renderLargerThumbnail: true
+          thumbnailUrl: banner,
+         // thumbnail: banner,
+         // sourceUrl: redes
         }
       }
-    },
-    { quoted: m }
-  )
+    }, { quoted: m })
+
 }
     } catch (e) {
-      await m.reply(msgglobal + e)
+      await m.reply(msgglobal)
     }
   }
 };
